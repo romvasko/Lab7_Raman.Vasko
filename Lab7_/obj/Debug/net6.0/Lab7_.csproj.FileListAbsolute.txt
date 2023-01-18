@@ -1,0 +1,17 @@
+C:\Users\Frankenstein\source\repos\Lab7_\Lab7_\bin\Debug\net6.0\Lab7_.exe
+C:\Users\Frankenstein\source\repos\Lab7_\Lab7_\bin\Debug\net6.0\Lab7_.deps.json
+C:\Users\Frankenstein\source\repos\Lab7_\Lab7_\bin\Debug\net6.0\Lab7_.runtimeconfig.json
+C:\Users\Frankenstein\source\repos\Lab7_\Lab7_\bin\Debug\net6.0\Lab7_.dll
+C:\Users\Frankenstein\source\repos\Lab7_\Lab7_\bin\Debug\net6.0\Lab7_.pdb
+C:\Users\Frankenstein\source\repos\Lab7_\Lab7_\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Frankenstein\source\repos\Lab7_\Lab7_\obj\Debug\net6.0\Lab7_.csproj.AssemblyReference.cache
+C:\Users\Frankenstein\source\repos\Lab7_\Lab7_\obj\Debug\net6.0\Lab7_.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Frankenstein\source\repos\Lab7_\Lab7_\obj\Debug\net6.0\Lab7_.AssemblyInfoInputs.cache
+C:\Users\Frankenstein\source\repos\Lab7_\Lab7_\obj\Debug\net6.0\Lab7_.AssemblyInfo.cs
+C:\Users\Frankenstein\source\repos\Lab7_\Lab7_\obj\Debug\net6.0\Lab7_.csproj.CoreCompileInputs.cache
+C:\Users\Frankenstein\source\repos\Lab7_\Lab7_\obj\Debug\net6.0\Lab7_.csproj.CopyComplete
+C:\Users\Frankenstein\source\repos\Lab7_\Lab7_\obj\Debug\net6.0\Lab7_.dll
+C:\Users\Frankenstein\source\repos\Lab7_\Lab7_\obj\Debug\net6.0\refint\Lab7_.dll
+C:\Users\Frankenstein\source\repos\Lab7_\Lab7_\obj\Debug\net6.0\Lab7_.pdb
+C:\Users\Frankenstein\source\repos\Lab7_\Lab7_\obj\Debug\net6.0\Lab7_.genruntimeconfig.cache
+C:\Users\Frankenstein\source\repos\Lab7_\Lab7_\obj\Debug\net6.0\ref\Lab7_.dll

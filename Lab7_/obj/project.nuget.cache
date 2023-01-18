@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "umSyrfJ4XYzKNG6laHeJlYF2HafT4a0YtXW2N0c7qyuX6NplH08sq2tYPva8r+UCHKKcVJ7T5iW005E3vpKc1A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Frankenstein\\source\\repos\\Lab7_\\Lab7_\\Lab7_.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Frankenstein\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
