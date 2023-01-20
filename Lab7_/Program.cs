@@ -33,7 +33,6 @@ if (i == 1) {
 
 
     XmlSerializer xmlser = new XmlSerializer(typeof(Squad));
-    parse = new Squad();
     using (Stream serialStream = new FileStream($"{path}\\{parse.SquadName} {parse.SquadType}.xml", FileMode.Create)) {
         xmlser.Serialize(serialStream, parse);
     }
