@@ -3,11 +3,11 @@ using System.Xml.Serialization;
 
 string path = "..\\temp";
 
-var sq = new Squad() { squadName = "name", squadType = "111" };
+var sq = new Squad() { SquadName = "name", SquadType = "111" };
 
-//using (Stream stream = new FileStream($"{path}\\test.json", FileMode.Create, FileAccess.Write)) {
-//    JsonSerializer.Serialize(stream, sq);
-//}
+using (Stream stream = new FileStream($"{path}\\test.json", FileMode.Create, FileAccess.Write)) {
+    JsonSerializer.Serialize(stream, sq);
+}
 
 Squad parse;
 string[] fileList = Directory.GetFiles(path);
@@ -21,24 +21,55 @@ foreach (var item in fileList) {
 }
 if (i == 1) {
     //fileList.SingleOrDefault(".json");
-    using (Stream stream = new FileStream($"{path}\\{jsonFile}", FileMode.Open, FileAccess.Read)) {
-        parse = JsonSerializer.Deserialize<Squad>(stream);
+        string json = "";
+    using (StreamReader stream = new StreamReader($"{path}\\{jsonFile}")) {
+        json = await stream.ReadToEndAsync();
     }
 
-    XmlSerializer xmlser = new XmlSerializer(typeof(Squad));
 
-    using (Stream serialStream = new FileStream($"{path}\\{parse.squadName} {parse.squadType}.xml", FileMode.Create)) {
+
+    parse = new Squad(ParseString(json));
+
+
+
+    XmlSerializer xmlser = new XmlSerializer(typeof(Squad));
+    parse = new Squad();
+    using (Stream serialStream = new FileStream($"{path}\\{parse.SquadName} {parse.SquadType}.xml", FileMode.Create)) {
         xmlser.Serialize(serialStream, parse);
     }
 
-    Console.WriteLine(parse.squadName);
 }
 else { Console.WriteLine("something wrong"); }
 
+static Squad ParseString(string json) {
+    Squad parse = new Squad();
+    Dictionary<string, string> dict = new Dictionary<string, string>();
+    json = json.Replace("\"", "");
+    string[] json2 = json.Split(",");
+    foreach (var item in json2) {
+    string[] json3 = item.Split(":");
+        dict.Add(json3[0].Replace("{",""), json3[1].Replace("}", ""));
+    }
+    foreach (var item in dict) {
+        if(item.Key == "SquadName")
+            parse.SquadName = item.Value;
+        else if(item.Key == "SquadType")
+            parse.SquadType = item.Value;
+    }
+
+    return parse;
+}
 
 [Serializable]
 public class Squad {
-    public string squadName { get; set; }
-    public string squadType { get; set; }
+    public string SquadName { get; set; }
+    public string SquadType { get; set; }
+    public Squad() {
 
+    }
+    public Squad(Squad squad) {
+        this.SquadName = squad.SquadName;
+        this.SquadType = squad.SquadType;
+    }
 }
+
