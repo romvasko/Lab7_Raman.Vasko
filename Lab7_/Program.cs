@@ -14,13 +14,12 @@ string[] fileList = Directory.GetFiles(path);
 int i = 0;
 string jsonFile = "";
 foreach (var item in fileList) {
-    if (item.Contains(".json")) {
+    if (item.EndsWith(".json")) {
         jsonFile = item;
         i++;
     }
 }
 if (i == 1) {
-    //fileList.SingleOrDefault(".json");
         string json = "";
     using (StreamReader stream = new StreamReader($"{path}\\{jsonFile}")) {
         json = await stream.ReadToEndAsync();
@@ -28,7 +27,7 @@ if (i == 1) {
 
 
 
-    parse = new Squad(ParseString(json));
+    parse = ParseString(json);
 
 
 
@@ -63,12 +62,5 @@ static Squad ParseString(string json) {
 public class Squad {
     public string SquadName { get; set; }
     public string SquadType { get; set; }
-    public Squad() {
-
-    }
-    public Squad(Squad squad) {
-        this.SquadName = squad.SquadName;
-        this.SquadType = squad.SquadType;
-    }
 }
 
